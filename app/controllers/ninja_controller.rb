@@ -1,0 +1,2 @@
+class NinjaController < ApplicationController
+end

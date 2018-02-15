@@ -1,0 +1,9 @@
+bundle installe
+rails db:migrate
+rails populate:init_game
+=> Create all weapons
+=> Seeds the DB
+
+IF WANT TO RESET :
+rails db:drop && rails db:create && rails db:migrate
+rails populate:init_game

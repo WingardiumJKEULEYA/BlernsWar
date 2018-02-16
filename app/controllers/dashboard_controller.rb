@@ -1,4 +1,6 @@
 class DashboardController < ApplicationController
-  def show
+  def index
+    puts params[:controller]
+    @ninja = current_user.ninja
   end
 end

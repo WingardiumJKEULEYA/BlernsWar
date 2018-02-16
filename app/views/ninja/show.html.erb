@@ -1,4 +1,4 @@
-<div class="card_sign-in-up">
+<div class="card">
   <h2>Ninja : <%= @ninja.name %></h2><br>
   <table style="width:100%">
     <tr>
@@ -14,5 +14,5 @@
       </tr>
     <% end %>
   </table><br>
-  <p><%= link_to "Edit ninja's name", root_url, class: 'btn btn-lg btn-warning btn-block' %></p>
+  <p><%= link_to "Edit ninja's name", edit_ninja_path, class: 'btn btn-lg btn-warning btn-block' %></p>
 </div>

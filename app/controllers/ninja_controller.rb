@@ -9,7 +9,15 @@ class NinjaController < ApplicationController
   end
 
   def update
-
+    respond_to do |format|
+      if @ninja.update(ninja_params)
+        format.html { redirect_to @ninja, notice: 'You ninja was successfully updated.' }
+        # format.json { render :show, status: :ok, location: @ninja }
+      else
+        format.html { render :edit }
+        # format.json { render json: @ninja.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   private
@@ -21,7 +29,6 @@ class NinjaController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def ninja_params
-    # params.require(:ninja).permit(:name)
-    params.fetch(:ninja, {})
+    params.require(:ninja).permit(:name)
   end
 end

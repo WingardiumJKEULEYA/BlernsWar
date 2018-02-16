@@ -1,7 +1,10 @@
 <%= form_with(model: ninja, local: true) do |form| %>
   <% if ninja.errors.any? %>
     <p id="error_explanation">
-      <h2><%= pluralize(ninja.errors.count, "error") %> prohibited this ninja from being saved:</h2>
+      
+      <p class="alert alert-danger" role="alert">
+        <%= pluralize(ninja.errors.count, "#{ninja.errors.count > 1 ? 'Erros' : 'Error'}") %> !
+      </p>
 
       <ul>
       <% ninja.errors.full_messages.each do |message| %>
@@ -11,7 +14,7 @@
     </p>
   <% end %>
 
-  <%= form.text_field :name, autofocus: true, placeholder:"New name for your ninja", class: "form-control", required: true %>
+  <%= form.text_field :name, autofocus: true, placeholder:"New name for your ninja", class: "form-control", required: true %><br>
 
   <p class="actions">
     <%= form.submit "Confirm !", class: 'btn btn-lg btn-primary btn-block' %>

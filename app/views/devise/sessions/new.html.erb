@@ -1,6 +1,6 @@
 <div class="card_sign-in-up">
   <h2>Log in</h2><br>
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.email_field :email, autofocus: true, placeholder:"example@email.com", class: "form-control", id: 'email_field' %>
       <%= f.password_field :password, autocomplete: "off", placeholder:"Password", class: "form-control", id: 'password_field' %>

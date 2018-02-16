@@ -1,0 +1,18 @@
+<div class="card_sign-in-up">
+  <h2>Ninja : <%= @ninja.name %></h2><br>
+  <table style="width:100%">
+    <tr>
+      <th>Weapon</th>
+      <th>Damage</th> 
+      <th>Price in store</th>
+    </tr>
+    <% @ninja.weapons.each do |weapon| %>
+      <tr>
+        <td><%= weapon.name %></td>
+        <td><%= weapon.damage %></td> 
+        <td><%= weapon.price %></td>
+      </tr>
+    <% end %>
+  </table><br>
+  <p><%= link_to "Edit ninja's name", root_url, class: 'btn btn-lg btn-warning btn-block' %></p>
+</div>

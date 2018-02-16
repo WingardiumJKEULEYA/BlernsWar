@@ -6,6 +6,11 @@ namespace :populate do
     Weapon.create(name: "Nunchaku", damage: 25, price: 300)
     Weapon.create(name: "Katana", damage: 50, price: 600)
 
+    Rake::Task['db:seed'].invoke # seed users and ninjas + 2 weapons
+  end
+
+  desc "Seed again"
+  task reseed: :environment do
     Rake::Task['db:seed'].invoke
   end
 end

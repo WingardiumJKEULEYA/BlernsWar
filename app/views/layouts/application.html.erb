@@ -21,7 +21,9 @@
           <div class="navbar-nav mr-auto">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">About</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <% if current_user %>
+              <a class="nav-item nav-link disabled" href="#">My Ninja</a>
+            <% end %>
           </div>
           <div class="navbar-nav ml-auto">
             <% if current_user %>

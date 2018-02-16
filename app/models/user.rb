@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_one :ninja
+
+  validates :email, presence: true, uniqueness: true 
 end

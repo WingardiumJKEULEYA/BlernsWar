@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180215180012) do
+ActiveRecord::Schema.define(version: 20180218163109) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "battles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "winner"
+  end
+
+  create_table "battles_ninjas", id: false, force: :cascade do |t|
+    t.bigint "battle_id", null: false
+    t.bigint "ninja_id", null: false
+  end
 
   create_table "ninjas", force: :cascade do |t|
     t.string "name", default: "Unknown Ninja", null: false
@@ -26,6 +37,13 @@ ActiveRecord::Schema.define(version: 20180215180012) do
   create_table "ninjas_weapons", id: false, force: :cascade do |t|
     t.bigint "ninja_id", null: false
     t.bigint "weapon_id", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.decimal "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

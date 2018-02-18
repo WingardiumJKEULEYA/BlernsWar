@@ -1,0 +1,17 @@
+<div class="card">
+  <h2>Last Battles</h2><br>
+  <table style="width:100%">
+    <tr>
+      <th>Battle ID</th>
+      <th>Ninjas</th> 
+      <th>Date</th>
+    </tr>
+    <% @battles.each do |battle| %>
+      <tr>
+        <td><%= battle.id %></td>
+        <td><%= display_ninjas(battle) %></td> 
+        <td><%= battle.updated_at.strftime("%-d/%m %H:%M:%S") %></td>
+      </tr>
+    <% end %>
+  </table><br>
+</div>

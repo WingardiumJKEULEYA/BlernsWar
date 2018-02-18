@@ -40,7 +40,7 @@ Please pull request to contribute ! ;)
 
 ## Authors
 
-* Jean-Michel KEULEYAN** - *Initial work* - [@Github](https://github.com/WingardiumJKEULEYA) - [@Twitter](https://twitter.com/42_jkeuleya) - [@Malt](https://www.malt.fr/profile/jeanmichelkeuleyan)
+* Jean-Michel KEULEYAN - [@Github](https://github.com/WingardiumJKEULEYA) - [@Twitter](https://twitter.com/42_jkeuleya) - [@Malt](https://www.malt.fr/profile/jeanmichelkeuleyan)
 
 ## License
 

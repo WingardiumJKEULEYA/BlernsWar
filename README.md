@@ -31,7 +31,8 @@ $> rails populate:init_game # Run rails task, short description in /lib/tasks/po
 
 ## Deployment
 
-==== IN DEV ====
+1- Pre-commit verification is active (Git Hook).
+You cannot push if Rubocop detects an error !
 
 ## Contributing
 

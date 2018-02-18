@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'rubocop', '~> 0.52.1', require: false
 end
 
 group :development do

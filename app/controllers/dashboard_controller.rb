@@ -1,3 +1,4 @@
+# Controller : Dashboard
 class DashboardController < ApplicationController
   def index
     puts params[:controller]

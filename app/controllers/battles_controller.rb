@@ -1,3 +1,4 @@
+# Controller : Battles
 class BattlesController < ApplicationController
   respond_to :html, :js
   def index

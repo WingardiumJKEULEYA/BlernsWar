@@ -1,0 +1,18 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'log/**/*'
+    - 'script/**/*'
+    - 'test/**/*'
+    - 'tmp/**/*'
+    - '**/Rakefile'
+    - '**/config.ru'
+    - '**/Gemfile'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/LineLength:
+    Enabled: false

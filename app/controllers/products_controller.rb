@@ -1,3 +1,4 @@
+# Controller : Products
 class ProductsController < ApplicationController
   def index
     @ninja = current_user.ninja
@@ -45,7 +46,8 @@ class ProductsController < ApplicationController
     @product.destroy
   end
 
-private
+  private
+
   def product_params
     params.require(:product).permit(:name, :price)
   end

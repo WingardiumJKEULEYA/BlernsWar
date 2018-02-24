@@ -11,6 +11,7 @@ class NinjaController < ApplicationController
   def update
     respond_to do |format|
       if @ninja.update(ninja_params)
+        NinjaMailer.update_ninja(@ninja).deliver_later!
         format.html { redirect_to @ninja, notice: 'Your ninja was successfully updated.' }
         # format.json { render :show, status: :ok, location: @ninja }
       else

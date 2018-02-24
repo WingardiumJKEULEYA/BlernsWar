@@ -23,9 +23,10 @@ body, html {
 }
 
 body {
-  background-size:     cover;                      /* <------ */
-  background-repeat:   no-repeat;
-  background-position: center center;              /* optional, center the image */
-  background-image: $background-image;
+  // background-size:     cover;                      /* <------ */
+  // background-repeat:   no-repeat;
+  // background-position: center center;              /* optional, center the image */
+  // background-image: $background-image;
+  background-color: #828282;
   color: #f5f5f5;
 }

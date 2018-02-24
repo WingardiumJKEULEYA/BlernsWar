@@ -4,5 +4,6 @@ class BattlesController < ApplicationController
   def index
     @ninja = current_user.ninja
     @battles = Battle.all
+    @ninjas = Ninja.where.not(id: current_user.ninja.id)
   end
 end

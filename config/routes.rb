@@ -11,8 +11,10 @@ Rails.application.routes.draw do
   resources   :dashboard, only: [:index]
   resources   :ninja, only: [:show, :edit, :update]
   resources   :battles, only: [:index]
-  resources :products do
+  resources   :products do
     get "delete"
   end
+  
+  post "fight", to: 'battles#fight'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

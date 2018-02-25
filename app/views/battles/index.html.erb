@@ -8,7 +8,7 @@
     <% @ninjas.each do |ninja| %>
       <tr>
         <td id=<%= ninja.id %>><%= "#{ninja.name} (#{ninja.user.id})" %></td>
-        <td><%= link_to "BATTLE !", '#', class: 'btn btn-danger' %></td>
+        <td><%= link_to "BATTLE !", fight_path(ninja_id: ninja.id), method: :post, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </table><br>

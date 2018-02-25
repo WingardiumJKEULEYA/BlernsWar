@@ -1,3 +1,4 @@
+# Job : Fight
 class FightJob < ApplicationJob
   queue_as :default
 

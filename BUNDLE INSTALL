@@ -7,3 +7,8 @@ rails populate:init_game
 IF WANT TO RESET :
 rails db:drop && rails db:create && rails db:migrate
 rails populate:init_game
+
+--
+
+Git Hook (pre-commit) :
+https://pastebin.com/kSudYV3A

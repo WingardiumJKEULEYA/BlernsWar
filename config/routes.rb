@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   authenticated :user do
@@ -12,6 +13,12 @@ Rails.application.routes.draw do
   resources   :battles, only: %i[index]
   resources   :products do
     get 'delete'
+  end
+
+  resources :marketplace, only: %i[index] do
+    member do
+      post 'buy'
+    end
   end
 
   post 'fight', to: 'battles#fight'

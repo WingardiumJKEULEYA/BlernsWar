@@ -4,13 +4,11 @@
     <tr>
       <th>Weapon</th>
       <th>Damage</th> 
-      <th>Price in store</th>
     </tr>
     <% @ninja.weapons.each do |weapon| %>
       <tr>
         <td><%= weapon.name %></td>
         <td><%= weapon.damage %></td> 
-        <td><%= weapon.price %></td>
       </tr>
     <% end %>
   </table><br>

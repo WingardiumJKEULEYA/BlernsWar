@@ -1,0 +1,20 @@
+<div class="card">
+  <h2>Marketplace</h2><br>
+  <table style="width:100%">
+    <tr>
+      <th>Weapon</th>
+      <th>Damage</th> 
+      <th>Price in store</th>
+      <th>Action</th>
+    </tr>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.damage %></td> 
+        <td><%= item.price %></td>
+        <td><%= link_to "BUY !", buy_marketplace_path(item.id), method: :post, class: 'btn btn-info' %></td>
+      </tr>
+    <% end %>
+  </table><br>
+  <p><%#= link_to "Edit ninja's name", edit_ninja_path, class: 'btn btn-lg btn-warning btn-block' %></p>
+</div>
